@@ -1,6 +1,11 @@
+using Microsoft.AspNetCore.Builder;
+
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
+
 
 builder.Services.AddControllersWithViews();
 
@@ -16,7 +21,9 @@ if (!app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();
-
+app.UseCors(x => x.AllowAnyOrigin()
+                  .AllowAnyMethod()
+                  .AllowAnyHeader());
 
 app.MapControllerRoute(
     name: "default",
