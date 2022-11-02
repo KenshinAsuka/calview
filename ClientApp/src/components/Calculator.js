@@ -1,7 +1,9 @@
 ﻿import React, { Component, useEffect, useState } from 'react';
 
 function fetchAPI(param) {
-    const url = "https://localhost:7197/api/Main/calculate?sum=" + param;
+    //use https://localhost:7197 to test
+
+    const url = "https://billaspnetprojects.visualstudio.com//api/Main/calculate?sum=" + param;
 
     return fetch(url, {
         method: 'GET',
