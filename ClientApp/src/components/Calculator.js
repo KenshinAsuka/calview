@@ -2,8 +2,8 @@
 
 function fetchAPI(param) {
     //use https://localhost:7197 to test
-
-    const url = "https://billaspnetprojects.visualstudio.com//api/Main/calculate?sum=" + param;
+    //https://billaspnetprojects.visualstudio.com
+    const url = "https://localhost:7197/api/Main/calculate?sum=" + param;
 
     return fetch(url, {
         method: 'GET',
